@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id='box'>
+
+</div>
+<input type="button" id="btn"/>
+</body>
+</html>
+<script src="jquery.js"></script>
+<script>
+$(function(){
+    var b = document.getElementById("box")
+    $('#btn').click(function(){
+        $.ajax({
+            url:'http:192.168.22.59:3000/api',
+            success:function(data){
+                console.log(data);
+                console.log(data.data[1].content);
+                b.innerHTML = data.data[1].content
+            }
+        })
+
+    })
+
+})
+</script>

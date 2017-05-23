@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var arr = ["c", "a", "z", "a", "x", "a"]
+    var obj = {};
+    for(var a = 0;a<arr.length;a++){
+        var item = arr[a];
+        if(obj[item]){
+            obj[item]++;
+        }else{
+            obj[item] = 1;
+        }
+    }
+    for(var k in obj){
+        console.log(k+'出现了'+obj[k]+'次')
+    }
+
+</script>
